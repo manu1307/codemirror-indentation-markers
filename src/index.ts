@@ -64,7 +64,7 @@ function indentTheme(colorOptions: IndentationMarkerConfiguration['colors']) {
 function createGradient(markerCssProperty: string, thickness: number, indentWidth: number, startOffset: number, columns: number) {
   const gradient = `repeating-linear-gradient(to right, var(${markerCssProperty}) 0 ${thickness}px, transparent ${thickness}px ${indentWidth}ch)`
   // Subtract one pixel from the background width to get rid of artifacts of pixel rounding
-  return `${gradient} ${startOffset * indentWidth}.5ch/calc(${indentWidth * columns}ch - 1px) no-repeat`
+  return `${gradient} ${startOffset * indentWidth}ch/calc(${indentWidth * columns}ch - 1px) no-repeat`
 }
 
 function makeBackgroundCSS(entry: IndentEntry, indentWidth: number, hideFirstIndent: boolean, thickness: number) {
